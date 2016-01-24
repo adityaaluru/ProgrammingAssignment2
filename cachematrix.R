@@ -1,9 +1,9 @@
-## This script enables user to per get/set operations on the a given matrix
-## and also allows the inverse of the matrix to be cache for retrieval
-## As long as the matrix is not changing, the inverse for the matrix would
-## be calculated once
+## This script enables user to perform get/set operations on a given
+## matrix and also allows the inverse of the matrix to be cached.
+## As long as the matrix does'nt change, the inverse for the matrix would
+## be calculated once and cached.
 
-## This function makes a cache matrix that stores a matrix and its inverse
+## This function makes a 'special' matrix that stores a matrix and its inverse
 
 makeCacheMatrix <- function(x = matrix()) 
 {
@@ -29,7 +29,9 @@ makeCacheMatrix <- function(x = matrix())
 }
 
 
-## This function calculates the matrix inverse that stores it in matrix
+## This function calculates the matrix inverse and stores it in 'special' matrix.
+## If this 'special' matrix already has a cached inverse that is sent back
+## without calculating it the second time.
 
 cacheSolve <- function(x, ...)
 {
